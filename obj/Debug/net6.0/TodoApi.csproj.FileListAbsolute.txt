@@ -1,0 +1,7 @@
+/Users/shama/Desktop/TodoApi/obj/Debug/net6.0/TodoApi.csproj.AssemblyReference.cache
+/Users/shama/Desktop/TodoApi/obj/Debug/net6.0/TodoApi.GeneratedMSBuildEditorConfig.editorconfig
+/Users/shama/Desktop/TodoApi/obj/Debug/net6.0/TodoApi.AssemblyInfoInputs.cache
+/Users/shama/Desktop/TodoApi/obj/Debug/net6.0/TodoApi.AssemblyInfo.cs
+/Users/shama/Desktop/TodoApi/obj/Debug/net6.0/TodoApi.csproj.CoreCompileInputs.cache
+/Users/shama/Desktop/TodoApi/obj/Debug/net6.0/TodoApi.MvcApplicationPartsAssemblyInfo.cache
+/Users/shama/Desktop/TodoApi/obj/Debug/net6.0/TodoApi.sourcelink.json
