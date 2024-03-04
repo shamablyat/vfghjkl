@@ -28,7 +28,7 @@ pipeline {
                 cd test-dotnet 
                 ls
                 pwd
-                dotnet run
+                dotnet run --launch-profile https
                 '''
             }
         }
