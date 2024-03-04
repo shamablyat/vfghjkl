@@ -17,9 +17,9 @@ pipeline {
                 '''
             }
         }
-        stage('dotnet') {
+        stage('dotnet.') {
             when {
-                branch "main."
+                branch "main"
             }
             steps {
                 sh '''
