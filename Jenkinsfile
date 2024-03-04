@@ -27,8 +27,8 @@ pipeline {
                 git clone https://github.com/shamablyat/test-dotnet/ --branch main
                 cd test-dotnet 
                 dotnet build
-                systemctl reload dotnet-test.service
-                systemctl status dotnet-test.service
+                sudo systemctl reload dotnet-test.service
+                sudo systemctl status dotnet-test.service
                 '''
             }
         }
