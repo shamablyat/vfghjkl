@@ -24,11 +24,10 @@ pipeline {
             steps {
                 sh '''
                 rm -rf test-dotnet
-                git clone https://github.com/shamablyat/test-dotnet/
+                git clone https://github.com/shamablyat/test-dotnet/ --branch main
                 cd test-dotnet 
-                ls
-                pwd
-                dotnet run --launch-profile https
+                dotnet build
+                
                 '''
             }
         }
