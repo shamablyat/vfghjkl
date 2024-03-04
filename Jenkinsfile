@@ -17,7 +17,7 @@ pipeline {
                 '''
             }
         }
-        stage('dotnet') {
+        stage('dotnet.') {
             when {
                 branch "main"
             }
