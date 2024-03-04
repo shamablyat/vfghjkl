@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('docker') {
+        stage('docker.') {
             when {
                 branch "master"
             }
