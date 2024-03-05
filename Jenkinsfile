@@ -10,7 +10,7 @@ pipeline {
             steps {
                 sh '''
                 rm -rf test-dotnet
-                git clone https://github.com/shamablyat/test-dotnet/ --branch master
+                git clone https://github.com/shamablyat/vfghjkl/--branch master
                 cd test-dotnet 
                 ls
                 pwd
@@ -26,7 +26,7 @@ pipeline {
             steps {
                 sh '''
                 rm -rf test-dotnet
-                git clone https://github.com/shamablyat/test-dotnet/ --branch main
+                git clone https://github.com/shamablyat/vfghjkl/ --branch main
                 cd test-dotnet 
                 dotnet build
                 sudo systemctl restart dotnet-test.service
