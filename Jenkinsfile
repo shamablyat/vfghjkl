@@ -11,7 +11,7 @@ pipeline {
                 sh '''
                 rm -rf test-dotnet
                 git clone https://github.com/shamablyat/vfghjkl/--branch master
-                cd test-dotnet 
+                cd vfghjkl 
                 ls
                 pwd
                 docker compose up --build -d
@@ -27,7 +27,7 @@ pipeline {
                 sh '''
                 rm -rf test-dotnet
                 git clone https://github.com/shamablyat/vfghjkl/ --branch main
-                cd test-dotnet 
+                cd vfghjkl 
                 dotnet build
                 sudo systemctl restart dotnet-test.service
                 sudo systemctl status dotnet-test.service
