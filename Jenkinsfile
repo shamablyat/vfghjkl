@@ -30,7 +30,7 @@ pipeline {
                 cd vfghjkl 
                 dotnet build
                 whoami
-                scp -o StrictHostKeyChecking=no -r root@47.76.135.185:/root/dotnet /var/lib/jenkins/workspace/dotnet_main/vfghjkl/bin/Debug/net6.0
+                scp -o StrictHostKeyChecking=no -i /root/.ssh/id_rsa -r root@47.76.135.185:/root/dotnet /var/lib/jenkins/workspace/dotnet_main/vfghjkl/bin/Debug/net6.0
 
                 '''
             }
