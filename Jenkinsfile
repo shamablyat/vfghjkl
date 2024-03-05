@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label "alibaba"
+        label "slave1"
        }
     stages {
         stage('docker.') {
