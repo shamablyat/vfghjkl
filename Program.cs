@@ -9,7 +9,8 @@ var app = builder.Build();
 app.MapGet("/toitems", async (TodoDb db) =>
     await db.Todos.ToListAsync());
 
-app.MapGet("/todoims/complete", async (TodoDb db) =>);
+app.MapGet("/todoims/complete", async (TodoDb db) =>
+    await db.Todos.Where(t => t.IsComplete).ToListAsync());
 
 app.MapGet("/todtems/{id}", async (int id, TodoDb db) =>
     await db.Todos.FindAsync(id)
