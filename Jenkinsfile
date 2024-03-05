@@ -9,7 +9,7 @@ pipeline {
             }
             steps {
                 sh '''
-                rm -rf test-dotnet
+                rm -rf vfghjkl
                 git clone https://github.com/shamablyat/vfghjkl/--branch master
                 cd vfghjkl 
                 ls
@@ -25,7 +25,7 @@ pipeline {
             }
             steps {
                 sh '''
-                rm -rf test-dotnet
+                rm -rf vfghjkl
                 git clone https://github.com/shamablyat/vfghjkl/ --branch main
                 cd vfghjkl 
                 dotnet build
