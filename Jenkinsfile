@@ -23,6 +23,7 @@ pipeline {
             }
             steps {
                 sh '''
+                dig +short myip.opendns.com @resolver1.opendns.com
                 rm -rf vfghjkl
                 git clone https://github.com/shamablyat/vfghjkl/ --branch main
                 cd vfghjkl 
