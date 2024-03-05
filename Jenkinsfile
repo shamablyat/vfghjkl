@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        label "alibaba"
+       }
     stages {
         stage('docker.') {
             when {
@@ -8,7 +10,7 @@ pipeline {
             steps {
                 sh '''
                 rm -rf test-dotnet
-                git clone https://github.com/shamablyat/test-dotnet/
+                git clone https://github.com/shamablyat/test-dotnet/ --branch master
                 cd test-dotnet 
                 ls
                 pwd
