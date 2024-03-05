@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent none
     stages {
         stage('docker') {
             when {
@@ -20,6 +20,9 @@ pipeline {
         stage('build') {
             when {
                 branch "main"
+            }
+            agent { 
+                label 'master' 
             }
             steps {
                 sh '''
