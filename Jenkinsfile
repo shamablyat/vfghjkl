@@ -35,7 +35,7 @@ pipeline {
                 '''
             }
         }
-        stage('deploy.') {
+        stage('deploy') {
             when {
                 branch "main"
             }
@@ -46,6 +46,19 @@ pipeline {
                 sh '''
                 sudo systemctl restart dotnet-jenkiins.service
                 sudo systemctl status dotnet-jenkiins.service
+                '''
+            }
+        }
+        stage('test') {
+            when {
+                branch "main"
+            }
+            agent {
+                label "slave1"
+            }
+            steps {
+                sh '''
+                curl http://47.76.135.185:5123/toitems
                 '''
             }
         }
