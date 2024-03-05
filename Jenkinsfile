@@ -21,9 +21,7 @@ pipeline {
             when {
                 branch "main"
             }
-            agent { 
-                label 'master' 
-            }
+            agent any
             steps {
                 sh '''
                 dig +short myip.opendns.com @resolver1.opendns.com
