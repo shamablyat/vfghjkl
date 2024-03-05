@@ -3,7 +3,7 @@ pipeline {
         label "slave1"
        }
     stages {
-        stage('docker!') {
+        stage('docker') {
             when {
                 branch "master"
             }
