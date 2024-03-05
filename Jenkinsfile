@@ -29,8 +29,8 @@ pipeline {
                 git clone https://github.com/shamablyat/vfghjkl/ --branch main
                 cd vfghjkl 
                 dotnet build
-                sudo systemctl restart dotnet-test.service
-                sudo systemctl status dotnet-test.service
+                sudo systemctl restart dotnet-jenkiins.service
+                sudo systemctl status dotnet-jenkiins.service
                 '''
             }
         }
