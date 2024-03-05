@@ -19,7 +19,7 @@ pipeline {
                 '''
             }
         }
-        stage('dotnet') {
+        stage('build') {
             when {
                 branch "main"
             }
@@ -29,6 +29,19 @@ pipeline {
                 git clone https://github.com/shamablyat/vfghjkl/ --branch main
                 cd vfghjkl 
                 dotnet build
+                scp -r /var/lib/jenkins/workspace/dotnet_main/vfghjkl/bin/Debug/net6.0 root@47.76.135.185:/root/dotnet
+                '''
+            }
+        }
+        stage('deploy') {
+            when {
+                branch "main"
+            }
+            agent {
+                label "slave1"
+            }
+            steps {
+                sh '''
                 sudo systemctl restart dotnet-jenkiins.service
                 sudo systemctl status dotnet-jenkiins.service
                 '''
