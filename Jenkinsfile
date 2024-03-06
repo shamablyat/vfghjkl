@@ -57,21 +57,11 @@ pipeline {
                 script {
                     def commitInfo = sh(script: "git show -s --format='%an' ${env.GIT_COMMIT}", returnStdout: true).trim()
                     echo "Commit author: ${commitInfo}"
+                    echo "Building ${env.BUILD_NUMBER} on ${env.NODE_NAME}"
+                    echo "Commit: ${env.GIT_COMMIT}"
+                    echo "Branch: ${env.GIT_BRANCH}"
                 }
             }
         }
-        // stage('test') {
-        //     when {
-        //         branch "main"
-        //     }
-        //     agent {
-        //         label "slave1"
-        //     }
-        //     steps {
-        //         sh '''
-        //         curl http://47.76.135.185:5123/toitems
-        //         '''
-        //     }
-        // }
     }
 }
