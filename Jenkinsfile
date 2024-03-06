@@ -65,4 +65,12 @@ pipeline {
             }
         }
     }
+    post {
+        success {
+            script {
+                def message = "Build successful! Triggered by ${env.GITHUB_ACTOR}."
+                telegramSend message: message
+            }
+        }
+    }
 }
