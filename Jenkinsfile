@@ -61,6 +61,7 @@ pipeline {
                     echo "Building ${env.BUILD_NUMBER} on ${env.NODE_NAME}"
                     echo "Commit Message: ${commitMessage}"
                     echo "Branch: ${env.GIT_BRANCH}"
+                }
             }
         }
     }
