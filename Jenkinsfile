@@ -67,7 +67,7 @@ pipeline {
                     // def message = "Push event detected on branch: ${env.BRANCH_NAME}. Build successful!"
                     telegramSend(
                         chatId: "-4135540092",
-                        message: @{message}
+                        message: ${message}
                         
                     ) 
                 }
