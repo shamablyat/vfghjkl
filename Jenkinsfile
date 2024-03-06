@@ -56,9 +56,10 @@ pipeline {
             steps {
                 script {
                     def commitInfo = sh(script: "git show -s --format='%an' ${env.GIT_COMMIT}", returnStdout: true).trim()
+                    def commitMessage = sh(script: "git log -1 --pretty=%B ${env.GIT_COMMIT}", returnStdout: true).trim()
                     echo "Commit author: ${commitInfo}"
                     echo "Building ${env.BUILD_NUMBER} on ${env.NODE_NAME}"
-                    echo "Commit: ${env.GIT_COMMIT}"
+                    echo "Commit Message: ${commitMessage}"
                     echo "Branch: ${env.GIT_BRANCH}"
                 }
             }
