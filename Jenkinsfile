@@ -46,7 +46,7 @@ pipeline {
                 '''
             }
         }
-        stage('Get Commit Information') {
+        stage('Get Commit Informaasdtion') {
             when {
                 branch "main"
             }
