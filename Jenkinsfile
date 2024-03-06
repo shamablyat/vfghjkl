@@ -57,12 +57,13 @@ pipeline {
                 script {
                     def commitInfo = sh(script: "git show -s --format='%an' ${env.GIT_COMMIT}", returnStdout: true).trim()
                     def commitMessage = sh(script: "git log -1 --pretty=%B ${env.GIT_COMMIT}", returnStdout: true).trim()
-                    echo "Commit author: ${commitInfo}"
+                    // echo "Commit author: ${commitInfo}"
+                    sh "echo 'Commit author': '${commitInfo}'"
                     echo "Building ${env.BUILD_NUMBER} on ${env.NODE_NAME}"
                     echo "Commit Message: ${commitMessage}"
                     echo "Branch: ${env.GIT_BRANCH}"
                     def message = "Commit author: ${commitInfo} Building ${env.BUILD_NUMBER} on ${env.NODE_NAME} Commit Message: ${commitMessage} Branch: ${env.GIT_BRANCH}"
-                    sh 'curl -X POST -H "Content-Type: application/json" -d \'{"chat_id": "-4135540092", "text": '${message}'}\' "https://api.telegram.org/bot6441756857:AAHVQhKc1IrnYo8UsZ-lqKRz9NnktcQww3Y/sendMessage"'
+                    sh 'curl -X POST -H "Content-Type: application/json" -d \'{"disable_notification": false, "chat_id": "-4135540092", "text": ${message}}\' "https://api.telegram.org/bot6441756857:AAHVQhKc1IrnYo8UsZ-lqKRz9NnktcQww3Y/sendMessage"'
                 }
             }
             
