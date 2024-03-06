@@ -61,12 +61,7 @@ pipeline {
                     echo "Building ${env.BUILD_NUMBER} on ${env.NODE_NAME}"
                     echo "Commit Message: ${commitMessage}"
                     echo "Branch: ${env.GIT_BRANCH}"
-                    sh 'curl -X POST -H "Content-Type: application/json" -d \'{"chat_id": "-4135540092", "text": "[💀FAILED] script is failed build failed😭! 
-                    "Commit author: ${commitInfo}"
-                    "Commit Message: ${commitMessage}"
-                    "Branch: ${env.GIT_BRANCH}"
-                    "Building ${env.BUILD_NUMBER} on ${env.NODE_NAME}"
-                    ", "disable_notification": false}\' "https://api.telegram.org/bot6441756857:AAHVQhKc1IrnYo8UsZ-lqKRz9NnktcQww3Y/sendMessage"'}
+                    sh 'curl -X POST -H "Content-Type: application/json" -d \'{"chat_id": "-4135540092", "text": "[💀FAILED] script is failed build failed😭! echo "Commit author: ${commitInfo}" echo "Branch: ${env.GIT_BRANCH}"", "disable_notification": false}\' "https://api.telegram.org/bot6441756857:AAHVQhKc1IrnYo8UsZ-lqKRz9NnktcQww3Y/sendMessage"'}
             }
         }
     }
