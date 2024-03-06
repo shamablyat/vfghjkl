@@ -1,5 +1,5 @@
 pipeline {
-    agent none
+    agent any
     stages {
         stage('dockerr') {
             when {
@@ -67,9 +67,6 @@ pipeline {
     }
     post {
         success {
-            agent {
-                label "slave1"
-            }
             script {
                 sh 'curl -X POST -H "Content-Type: application/json" -d \'{"chat_id": "-4135540092", "text": "[💀FAILED] script is failed build failed😭! Commit author: ${commitInfo} Branch: ${env.GIT_BRANCH}", "disable_notification": false}\' "https://api.telegram.org/bot6441756857:AAHVQhKc1IrnYo8UsZ-lqKRz9NnktcQww3Y/sendMessage"'
             }
