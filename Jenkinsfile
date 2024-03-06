@@ -63,8 +63,8 @@ pipeline {
                     echo "Commit Message: ${commitMessage}"
                     echo "Branch: ${env.GIT_BRANCH}"
                     def message = "Commit author: ${commitInfo} Building ${env.BUILD_NUMBER} on ${env.NODE_NAME} Commit Message: ${commitMessage} Branch: ${env.GIT_BRANCH}"
-                    // sh "curl -X POST -H 'Content-Type: application/json' -d \"{'chat_id': '-4135540092', 'text': 'priv', 'disable_notification': false}\" 'https://api.telegram.org/bot6441756857:AAHVQhKc1IrnYo8UsZ-lqKRz9NnktcQww3Y/sendMessage'"
-                    sh "curl -X POST -H 'Content-Type: application/json' -d \"{'chat_id': '-4135540092', 'text': '[💀FAILED] Ukata api build failed😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭!', 'disable_notification': false}\" 'https://api.telegram.org/bot6441756857:AAHVQhKc1IrnYo8UsZ-lqKRz9NnktcQww3Y/sendMessage'"
+                    sh "curl -X POST -H 'Content-Type: application/json' -d \"{'chat_id': '-4135540092', 'text': 'priv', 'disable_notification': false}\" 'https://api.telegram.org/bot6441756857:AAHVQhKc1IrnYo8UsZ-lqKRz9NnktcQww3Y/sendMessage'"
+                    sh 'curl -X POST -H "Content-Type: application/json" -d \'{"chat_id": "-4135540092", "text": "[💀FAILED] Ukata api build failed😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭!", "disable_notification": false}\' "https://api.telegram.org/bot6441756857:AAHVQhKc1IrnYo8UsZ-lqKRz9NnktcQww3Y/sendMessage"'
                 }
             }
             
