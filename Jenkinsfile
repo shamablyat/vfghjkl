@@ -66,10 +66,11 @@ pipeline {
                     // sh "curl -X POST -H 'Content-Type: application/json' -d \"{'chat_id': '-4135540092', 'text': 'priv', 'disable_notification': false}\" 'https://api.telegram.org/bot6441756857:AAHVQhKc1IrnYo8UsZ-lqKRz9NnktcQww3Y/sendMessage'"
                     // def message = "Push event detected on branch: ${env.BRANCH_NAME}. Build successful!"
                     def message1 = "Build successful!"
-                    telegramSend(
-                        chatId: '-4135540092',
-                        message: message1
-                    )
+                    // telegramSend(
+                    //     chatId: '-4135540092',
+                    //     message: message1
+                    // )
+                    telegramSend message1
                 }
             }
         }
