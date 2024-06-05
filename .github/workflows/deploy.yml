@@ -1,0 +1,21 @@
+name: Manual Workflow Trigger with Inputs
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'image to deploy'
+        required: true
+        default: 'no'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Deploy to environment
+      run: |
+        docker ps
