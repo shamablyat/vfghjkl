@@ -1,3 +1,0 @@
-[submodule "ci-cd"]
-	path = ci-cd
-	url = https://github.com/shamablyat/ci-cd.git
