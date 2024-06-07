@@ -21,6 +21,9 @@ jobs:
         ls
         git submodule add https://github.com/shamablyat/ci-cd.git ci-cd
         cd ci-cd
+        echo 
         pwd
         ls
+        echo 
         rm -rf ci-cd
+        echo
