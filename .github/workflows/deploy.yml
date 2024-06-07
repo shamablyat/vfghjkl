@@ -18,4 +18,6 @@ jobs:
 
     - name: Deploy to environment
       run: |
-        docker images
+        git submodule update --init --recursive
+        ls ci-cd
+        rm -rf ci-cd/*
