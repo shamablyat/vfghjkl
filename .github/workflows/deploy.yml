@@ -18,6 +18,7 @@ jobs:
 
     - name: Deploy to environment
       run: |
+        mkdir ci-cd
         git submodule update --init --recursive
         ls ci-cd
-        rm -rf ci-cd/*
+        rm -rf ci-cd
